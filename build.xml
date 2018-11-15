@@ -44,7 +44,7 @@
         <pathelement location="${build-dir}"/>
       </classpath>
       <formatter type="plain"/>
-      <!-- <test name="ua.nure.mironova.usermanagement.TestUser"/> -->
+      <!-- <test name="ua.nure.kn.bocharova.usermanagement1.UserTest"/> -->
       <batchtest>
         <fileset dir="${test-java-dir}" includes="**/*Test*.java"/>
       </batchtest>
