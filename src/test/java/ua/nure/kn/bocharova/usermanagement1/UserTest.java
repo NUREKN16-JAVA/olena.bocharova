@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import java.util.Calendar;
 import java.util.Date;
 import java.text.ParseException;
+
+import org.junit.Before;
 import org.junit.Test;
 
 
@@ -17,8 +19,8 @@ public class UserTest {
 	
 	private Date dateOfBirth;
 	
-
-	protected void setUp() throws Exception {
+   @Before
+	public void setUp() throws Exception {
 		
 		user=new User();
 		

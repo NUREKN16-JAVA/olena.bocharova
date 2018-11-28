@@ -20,16 +20,25 @@ public class User implements Serializable  {
 	private String lastName;
 	private Date dateOfBirth;
 	
+	 public User(String firstName, String lastName, Date date) {
+	        this.firstName = firstName;
+	        this.lastName = lastName;
+	        this.dateOfBirth = date;
+	    }
+	    public User(Long id, String firstName, String lastName, Date date) {
+	        this.id = id;
+	        this.firstName = firstName;
+	        this.lastName = lastName;
+	        this.dateOfBirth = date;
+	    }
+	    public User() {
+	    }
 	
 	
 	
-	public User() {
-		super();
-		this.id = 0L;
-		this.firstName = "";
-		this.lastName = "";
-		this.dateOfBirth =Calendar.getInstance().getTime();
-	}
+	
+	
+	
 	//getters and setters
 	public Long getId() {
 		return id;
@@ -69,7 +78,7 @@ public class User implements Serializable  {
 	}
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+    	if (this == obj)
 			return true;
 		if (obj == null)
 			return false;

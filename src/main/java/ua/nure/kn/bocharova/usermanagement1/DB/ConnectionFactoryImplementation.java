@@ -6,22 +6,29 @@ import java.sql.SQLException;
 
 public class ConnectionFactoryImplementation implements ConnectionFactory {
 
-	public ConnectionFactoryImplementation() {
-		// TODO Auto-generated constructor stub
+	private String driver;
+	private String url;
+	private String user;
+	private String password;
+	
+	
+	public ConnectionFactoryImplementation(String driver, String url, String user, String password) {
+		this.driver = driver;
+		this.driver = url;
+		this.driver = user;
+		this.driver = password;
+		
 	}
 
 	@Override
 	public Connection createConnection() throws DatabaseException {
-		 String driver ="org.hsqldb.jdbcDriver";
-		 String url="jdbc:hsqldb:file:db/usermanagement1";
-		 String user ="sa";
-		 String password="";
+		
 		 
 		 try {
 			Class.forName(driver);
 		} catch (ClassNotFoundException e) {
 			
-			throw new DatabaseException(e);
+			throw new RuntimeException(e);
 		}
 		 try {
 		return DriverManager.getConnection(url, user, password);
@@ -29,4 +36,5 @@ public class ConnectionFactoryImplementation implements ConnectionFactory {
 		throw new DatabaseException(e);
 	}
 
+}
 }

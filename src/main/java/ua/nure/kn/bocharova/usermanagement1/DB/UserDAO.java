@@ -13,16 +13,16 @@ public interface UserDAO {
 	 * author master
 	 */
 	
-	public User create(final User user) throws DatabaseException;
+	 User create(final User user) throws DatabaseException;
+	 void update (final User user) throws DatabaseException;
+	 void delete( final User user) throws DatabaseException;
 	
-	public User find(final Long id)throws DatabaseException;
+	 User find(final Long id)throws DatabaseException;
 	
-	public Collection<User> findAll() throws DatabaseException;
+	 Collection<User> findAll() throws DatabaseException;
 	
-	public update(final User user) throws  DatabaseException;
 	
-	public delete(final User user) throws  DatabaseException;
-	 void setConnectionFactory(ConnectionFactory connectionFactory);
+	void setConnectionFactory(ConnectionFactory connectionFactory);
 	
 	
 
