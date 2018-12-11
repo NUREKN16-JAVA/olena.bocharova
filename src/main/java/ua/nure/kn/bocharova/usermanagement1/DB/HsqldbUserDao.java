@@ -96,7 +96,7 @@ import ua.nure.kn.bocharova.usermanagement1.User;
 	        }
 		 }
 
-	}
+	
 	@Override
 	public void delete(User user) throws DatabaseException {
 		try {

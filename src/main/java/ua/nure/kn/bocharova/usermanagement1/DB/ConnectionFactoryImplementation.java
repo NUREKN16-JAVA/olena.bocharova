@@ -3,6 +3,7 @@ package ua.nure.kn.bocharova.usermanagement1.DB;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class ConnectionFactoryImplementation implements ConnectionFactory {
 
@@ -17,6 +18,13 @@ public class ConnectionFactoryImplementation implements ConnectionFactory {
 		this.driver = url;
 		this.driver = user;
 		this.driver = password;
+		
+	}
+	public ConnectionFactoryImplementation(Properties properties) {
+		 user = properties.getProperty("connection.user");
+		 password = properties.getProperty("connection.password");
+		 url = properties.getProperty("connection.url");
+		 driver = properties.getProperty("connection.driver");
 		
 	}
 
